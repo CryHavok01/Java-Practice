@@ -1,7 +1,7 @@
 public class Car {
-  String color;
-  int miles;
-  boolean fast;
+  private String color;
+  private int miles;
+  private boolean fast;
 
   public Car(String paintColor, int milesDriven, boolean isFast) {
     color = paintColor;
@@ -29,6 +29,14 @@ public class Car {
     System.out.println("Vroom vroom");
   }
 
+  public String getColor() {
+    return this.color;
+  }
+
+  public boolean getFast() {
+    return this.fast;
+  }
+
   public String toString() {
     if (!fast) {
       return "This is a slow " + color + " car that has driven " + miles + " miles.";
@@ -46,6 +54,5 @@ public class Car {
     versa.tuneUp();
     System.out.println(versa);
   }
-  
   
 }
